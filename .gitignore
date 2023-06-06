@@ -1,0 +1,32 @@
+env/
+wey_backend/*.pyc
+wey_backend/*/*.pyc
+wey_backend/*/*/*.pyc
+
+
+
+
+# pyenv
+.python-version
+
+
+
+# SageMath parsed files
+*.sage.py
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+
+# pycharm
+.idea/
+
+
+# sqlite
+*.sqlite
+*.sqlite3
