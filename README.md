@@ -1,4 +1,4 @@
-### [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Социальная+сеть+Почтальон)](https://git.io/typing-svg)
+### [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Социальная+сеть+"Почтальон")](https://git.io/typing-svg)
 
 # Установка django
 ### 1) Создать виртуальное окружение и установить зависимости
