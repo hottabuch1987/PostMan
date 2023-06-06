@@ -1,4 +1,4 @@
-### Почтальон - Социальная сеть
+### [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Социальная+сеть+Почтальон)](https://git.io/typing-svg)
 
 # Установка django
 ### 1) Создать виртуальное окружение и установить зависимости
@@ -19,3 +19,7 @@
 # cкрипты запуска трендов и возможных друзей
     python scripts/generate_trends.py
     python scripts/generate_friends_suggestions.py
+
+
+[profile](https://raw.github.com/hottabuch1987/Postman/main/preview/profile.png)
+[register](https://raw.github.com/hottabuch1987/Postman/main/preview/register.png)
