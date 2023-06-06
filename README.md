@@ -21,5 +21,6 @@
     python scripts/generate_friends_suggestions.py
 
 
-[profile](https://raw.github.com/hottabuch1987/Postman/main/preview/profile.png)
-[register](https://raw.github.com/hottabuch1987/Postman/main/preview/register.png)
+[Страница профиля](https://raw.github.com/hottabuch1987/Postman/main/preview/profile.png)
+###
+[Страница регистрации](https://raw.github.com/hottabuch1987/Postman/main/preview/register.png)
