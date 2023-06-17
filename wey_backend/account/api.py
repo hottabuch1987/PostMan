@@ -17,7 +17,8 @@ def me(request):
         'id': request.user.id,
         'name': request.user.name,
         'email': request.user.email,
-        'avatar': request.user.get_avatar()
+        'avatar': request.user.get_avatar(),
+        
     })
 
 #регистрация
@@ -149,3 +150,5 @@ def handle_request(request, pk, status):
     notification = create_notification(request, 'accepted_friendrequest', friendrequest_id=friendship_request.id)
 
     return JsonResponse({'message': 'friendship request updated'})
+
+

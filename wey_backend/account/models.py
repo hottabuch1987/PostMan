@@ -2,6 +2,7 @@ import uuid
 
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, UserManager
 from django.db import models
+from product.models import Product
 from django.utils import timezone
 
 
@@ -37,15 +38,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     friends = models.ManyToManyField('self')
     friends_count = models.IntegerField(default=0)
     people_you_may_know = models.ManyToManyField('self')
-
+    my_product = models.ForeignKey(Product, related_name='my_product', on_delete=models.CASCADE)
     posts_count = models.IntegerField(default=0)
-
     is_active = models.BooleanField("Активный", default=True)
     is_superuser = models.BooleanField("Суперпользователь", default=False)
     is_staff = models.BooleanField("Администратор", default=False)
-
     date_joined = models.DateTimeField("Дата регистрации", default=timezone.now)
     last_login = models.DateTimeField("Последний визит", blank=True, null=True)
+
+
 
     objects = CustomUserManager()
 

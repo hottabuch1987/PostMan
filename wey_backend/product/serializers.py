@@ -1,7 +1,9 @@
 from rest_framework import serializers
 from .models import Category, Product
+from account.serializers import UserSerializer
 
 class ProductSerializer(serializers.ModelSerializer):
+    my_product = UserSerializer(many=True)
     class Meta:
         model = Product
         fields = (
@@ -13,6 +15,7 @@ class ProductSerializer(serializers.ModelSerializer):
                 "get_image",
                 "get_thumbnail",
                 'quantity',
+                'my_product'
                 
             )
         

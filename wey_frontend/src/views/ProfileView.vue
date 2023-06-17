@@ -5,6 +5,7 @@
                 <img :src="user.get_avatar" class="mb-6 rounded-full">
                 
                 <p><strong>{{ user.name }}</strong></p>
+                
 
                 <div class="mt-6 flex space-x-8 justify-around" v-if="user.id">
                     <RouterLink :to="{name: 'friends', params: {id: user.id}}" class="text-xs text-gray-500">{{ user.friends_count }} друзей</RouterLink>
@@ -86,6 +87,8 @@
             <PeopleYouMayKnow />
 
             <Trends />
+            <MyProduct />
+
         </div>
     </div>
 </template>
@@ -108,6 +111,7 @@ import axios from 'axios'
 import PeopleYouMayKnow from '../components/PeopleYouMayKnow.vue'
 import Trends from '../components/Trends.vue'
 import FeedItem from '../components/FeedItem.vue'
+import MyProduct from '../components/MyProduct.vue'
 import { useUserStore } from '@/stores/user'
 import { useToastStore } from '@/stores/toast'
 
@@ -127,7 +131,8 @@ export default {
     components: {
         PeopleYouMayKnow,
         Trends,
-        FeedItem
+        FeedItem,
+        MyProduct,
     },
 
     data() {

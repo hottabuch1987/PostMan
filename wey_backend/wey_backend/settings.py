@@ -70,6 +70,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
+    'django_celery_results',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -169,5 +171,35 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+# CELERY_BROKER_URL = 'redis://127.0.0.1:16379/0'
+CELERY_BROKER_URL = env("CELERY_BROKER_URL")
+# CELERY_RESULT_BACKEND = 'django-db'
+CELERY_RESULT_BACKEND = env('CELERY_RESULT_BACKEND')
 
+CELERY_CACHE_BACKEND = 'default'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',#django_redis.cache.RedisCache #django.core.cache.backends.db.DatabaseCache
+        'LOCATION': env("LOCATION"),
+    }
+}
+
+# CELERY_BEAT_SHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
+CELERY_BEAT_SHEDULER = {
+    "update-account-info": {
+            "task": "payments.tasks.update_account_info",
+            "scheduler": 60 * 1 # каждую минуту 
+        }
+    }
+
+CELERY_TIMEZONE = "Europe/Moscow"
+CELERY_TASK_TRACK_STARTED = True
+
+YM_CLIENT_ID=env("YM_CLIENT_ID")
+YM_CLIENT_SECRET=env("YM_CLIENT_SECRET")
+YM_REDIRECT_URL=env("YM_REDIRECT_URL")
+YM_FORM_URL=env("YM_FORM_URL")
+CELERY_TASK_SERIALIZER='json'
+CELERY_RESULT_SERIALIZER='json'
 

@@ -16,7 +16,7 @@ from django.template import RequestContext
 
 class LatesProductsList(APIView):
   def get(self, request, format=None):
-        products = Product.objects.filter(quantity__gte=1)
+        products = Product.objects.filter(quantity__gte=1, )
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
 

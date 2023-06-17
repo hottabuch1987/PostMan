@@ -37,6 +37,8 @@
                     <template v-if="userStore.user.isAuthenticated && userStore.user.id">
                         <RouterLink :to="{name: 'profile', params:{'id': userStore.user.id}}">
                             <img :src="userStore.user.avatar" class="w-12 rounded-full">
+                            <p>{{userStore.user.name}}</p>
+                            {{userStore.user.email}}
                         </RouterLink>
                     </template>
 
@@ -82,8 +84,8 @@ export default {
 <style lang="scss">
 nav {
 
-    background: rgb(2,0,36);
-     background: linear-gradient(90deg, rgb(119, 113, 241) 0%, rgba(89, 17, 184, 0.234) 14%, rgba(0,212,255,1) 100%); 
+    background: rgb(50, 255, 19);
+     background: linear-gradient(90deg, rgb(179, 241, 113) 0%, rgba(154, 232, 18, 0.234) 14%, rgb(186, 246, 171) 100%); 
 
 }
 
