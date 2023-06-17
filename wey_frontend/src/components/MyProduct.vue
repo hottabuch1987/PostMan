@@ -14,7 +14,7 @@
                     
                  
                 </div>
-                    <RouterLink :to="{name: 'productview', params: {id: product.name}}" class="py-2 px-3 bg-purple-600 text-white text-xs rounded-lg">Посмотреть</RouterLink>
+                        <!-- <RouterLink :to="{name: 'productview', params: {id: product.name}}" class="py-2 px-3 bg-purple-600 text-white text-xs rounded-lg">Посмотреть</RouterLink> -->
                 <!-- <RouterLink :to="{name: 'profile', params: {id: user.id}}" class="py-2 px-3 bg-purple-600 text-white text-xs rounded-lg">Посмотреть</RouterLink> -->
             </div>
 
