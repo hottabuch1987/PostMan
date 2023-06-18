@@ -13,7 +13,7 @@ class CustomUserManager(UserManager):
             raise ValueError("Вы не указали действительный адрес электронной почты")
         
         email = self.normalize_email(email)
-        user = self.model(email=email,  **extra_fields)#name=name,
+        user = self.model(email=email, name=name, **extra_fields)#name=name,
         user.set_password(password)
         user.save(using=self._db)
 
