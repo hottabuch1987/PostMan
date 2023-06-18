@@ -8,7 +8,7 @@ from django.utils import timezone
 
 
 class CustomUserManager(UserManager):
-    def _create_user(self, email, password, **extra_fields):# name,
+    def _create_user(self, email, name, password, **extra_fields):# name,
         if not email:
             raise ValueError("Вы не указали действительный адрес электронной почты")
         
