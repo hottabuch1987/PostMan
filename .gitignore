@@ -1,10 +1,8 @@
-# pyenv
-.python-version
+
+https:
 
 
 
-# SageMath parsed files
-*.sage.py
 
 # virtualenv
 .venv
@@ -14,6 +12,3 @@ ENV/
 # pycharm
 .idea/
 
-# sqlite
-*.sqlite
-*.sqlite3
